@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 Not Found</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: radial-gradient(circle at top, #1b1b2f, #0f0f1a);
+      overflow: hidden;
+    }
+
+    /* glowing orbs background */
+    .bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.6;
+      animation: float 10s infinite ease-in-out;
+    }
+
+    .orb1 { width: 200px; height: 200px; background: #00c6ff; top: 10%; left: 20%; }
+    .orb2 { width: 250px; height: 250px; background: #ff00cc; bottom: 15%; right: 15%; }
+    .orb3 { width: 180px; height: 180px; background: #7f00ff; top: 60%; left: 70%; }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+    }
+
+    /* glass card */
+    .container {
+      position: relative;
+      text-align: center;
+      padding: 50px 40px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      animation: pop 1s ease;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      font-size: 120px;
+      background: linear-gradient(90deg, #00c6ff, #ff00cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 10px #00c6ff); }
+      to { filter: drop-shadow(0 0 25px #ff00cc); }
+    }
+
+    h2 {
+      margin-top: 10px;
+      font-size: 24px;
+    }
+
+    p {
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      background: linear-gradient(90deg, #00c6ff, #ff00cc);
+      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(255,0,200,0.4);
+    }
+
+    a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 35px rgba(0,200,255,0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+
+  <div class="container">
+    <h1>404</h1>
+    <h2>Oops! Trang không tồn tại 😢</h2>
+    <p>Có vẻ như bạn đã đi lạc vào không gian số.</p>
+    <a href="https://ais-pre-bie63uidjosznlf7wdsabw-596641230131.asia-southeast1.run.app/">⬅ Quay về trang chủ</a>
+  </div>
+
+</body>
+</html>
